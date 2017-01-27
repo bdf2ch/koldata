@@ -1,0 +1,163 @@
+/**********
+** BASIC
+ **********/
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto Regular";
+  background: #FAFAFA;
+}
+/**********
+** FONTS
+*********/
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Roboto Italic";
+  src: url("../fonts/Roboto-Italic.ttf");
+}
+#app-menu {
+  float: left;
+  width: 300px;
+  height: 100%;
+  background: #455A64;
+}
+#app-menu #current-user {
+  height: 200px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: transparent;
+  /*** Фото текущего пользователя ***/
+  /*** Имя текущего пользователя ***/
+  /*** Должность текущего пользователя ***/
+}
+#app-menu #current-user img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+#app-menu #current-user .current-user-name {
+  margin-top: 10px;
+  font-size: 17px;
+  text-align: center;
+  color: white;
+}
+#app-menu #current-user .current-user-position {
+  font-size: 14px;
+  color: #BDBDBD;
+  text-align: center;
+}
+#app-menu #items-container {
+  margin-top: 20px;
+}
+#app-menu #items-container .menu-item:hover {
+  background: #546E7A;
+}
+#app-menu #items-container .menu-item a {
+  display: block;
+  height: 40px;
+  padding-left: 15px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+  border-left: 3px solid transparent;
+}
+#app-menu #items-container .menu-item a.active {
+  border-left: 3px solid #FFB74D;
+  background: #37474F;
+}
+#app-menu #items-container .menu-item .menu-item-container {
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #263238;
+}
+#app-menu #items-container .menu-item .menu-item-container a {
+  display: block;
+  height: auto;
+  min-height: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+  font-size: 13px;
+  color: #81D4FA;
+}
+#app-menu #items-container .menu-item .menu-item-container a:hover {
+  color: #0288D1;
+}
+#app-menu #items-container .menu-item .fa {
+  float: left;
+  display: inline-block;
+  height: 40px;
+  margin-right: 15px;
+  font-size: 18px !important;
+  line-height: 40px;
+  color: #CFD8DC;
+}
+#app-menu #items-container .menu-item .menu-item-title {
+  display: inline-block;
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+#app-content {
+  margin-left: 300px;
+}
+#app-content-header {
+  overflow: hidden;
+  height: 50px;
+  box-sizing: border-box;
+  background: #EEEEEE;
+  border-bottom: 1px solid #E0E0E0;
+}
+#app-content-header .app-content-title {
+  float: left;
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 25px;
+  line-height: 50px;
+  color: #757575;
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+}
+#app-content-header .app-content-title-divider {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-left: -50px;
+  margin-right: 10px;
+  transform: rotate(45deg);
+  border-top: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+}
+#app-content-header #app-content-controls {
+  float: right;
+  height: 50px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  font-size: 24px;
+  line-height: 50px;
+}
+#app-content-header #app-content-controls a {
+  padding: 10px;
+  color: #BDBDBD !important;
+}
+#app-content-header #app-content-controls a:hover {
+  color: #757575 !important;
+}

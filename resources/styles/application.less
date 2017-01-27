@@ -1,0 +1,217 @@
+@import "variables";
+
+
+
+/**********
+** BASIC
+ **********/
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto Regular";
+  background: #FAFAFA;
+}
+
+
+
+/**********
+** FONTS
+*********/
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Italic";
+  src: url("../fonts/Roboto-Italic.ttf");
+}
+
+
+
+
+#app-menu {
+  float: left;
+  width: @app-menu-width;
+  height: 100%;
+  background: @app-menu-background-color;
+
+
+  #current-user {
+    height: @app-menu-current-user-height;
+    padding: 20px;
+    box-sizing: border-box;
+    background: @app-menu-current-user-background-color;
+
+    /*** Фото текущего пользователя ***/
+    img {
+      display: block;
+      width: @app-menu-current-user-photo-width;
+      height: @app-menu-current-user-photo-height;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 50%;
+    }
+
+    /*** Имя текущего пользователя ***/
+    .current-user-name {
+      margin-top: 10px;
+      font-size: 17px;
+      text-align: center;
+      color: white;
+    }
+
+    /*** Должность текущего пользователя ***/
+    .current-user-position {
+      font-size: 14px;
+      color: #BDBDBD;
+      text-align: center;
+    }
+  }
+
+
+  #items-container {
+    margin-top: 20px;
+    //background: #212121;
+
+    .menu-item {
+
+      &:hover {
+        background: #546E7A;
+      }
+
+      a {
+        display: block;
+        height: @app-menu-item-height;
+        padding-left: 15px;
+        padding-right: 10px;
+        box-sizing: border-box;
+
+        text-decoration: none;
+        color: white;
+        border-left: 3px solid transparent;
+        //background: #37474F;
+
+        &.active {
+          border-left: 3px solid #FFB74D;
+          background: #37474F;
+        }
+      }
+
+      .menu-item-container {
+        //margin-left: 20px;
+        padding-left: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background: #263238;
+
+        a {
+          display: block;
+          height: auto;
+          min-height: 20px;
+          //margin-left: 10px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          box-sizing: border-box;
+          font-size: 13px;
+          color: #81D4FA;
+
+          &:hover {
+            color: #0288D1;
+          }
+        }
+      }
+
+
+
+
+      .fa {
+        float: left;
+        display: inline-block;
+        height: @app-menu-item-height;
+        margin-right: 15px;
+        font-size: 18px !important;
+        line-height: @app-menu-item-height;
+        color: #CFD8DC;
+      }
+
+      .menu-item-title {
+        display: inline-block;
+        float: left;
+        height: @app-menu-item-height;
+        line-height: @app-menu-item-height;
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+
+
+
+    }
+
+  }
+}
+
+
+#app-content {
+  margin-left: @app-menu-width;
+}
+
+
+
+#app-content-header  {
+  overflow: hidden;
+  height: @app-content-header-height;
+  //padding-left: 20px;
+  box-sizing: border-box;
+  background: @app-content-header-background-color;
+  border-bottom: 1px solid #E0E0E0;
+
+  .app-content-title {
+    float: left;
+    height: @app-content-header-height;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    font-size: 25px;
+    line-height: @app-content-header-height;
+    color: #757575;
+    text-decoration: none;
+    border-bottom: 4px solid transparent;
+  }
+
+  .app-content-title-divider {
+    float: left;
+    width: @app-content-header-height;
+    height: @app-content-header-height;
+    margin-left: -50px;
+    margin-right: 10px;
+    transform: rotate(45deg);
+    border-top: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+  }
+
+  #app-content-controls {
+    float: right;
+    height: @app-content-header-height;
+    padding-right: 10px;
+    box-sizing: border-box;
+    font-size: 24px;
+    line-height: @app-content-header-height;
+
+    a {
+      padding: 10px;
+      color: #BDBDBD !important;
+
+      &:hover {
+        color: #757575 !important;
+      }
+    }
+
+  }
+}

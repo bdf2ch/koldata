@@ -1,0 +1,88 @@
+<!-- BEGIN: main -->
+<!DOCTYPE html>
+<html lang="ru" ng-app="application">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Административная панель</title>
+    <link rel="stylesheet" href="/resources/styles/application.css">
+    <link rel="stylesheet" href="/resources/styles/utils.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'>
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <script>
+        //var initial_data = {INITIAL_DATA};
+    </script>
+    <script src="/node_modules/angular/angular.min.js"></script>
+
+
+
+    <div id="app-menu">
+
+        <div id="current-user">
+            <img src="/resources/images/random.jpg" alt="">
+            <div class="current-user-name">Головоногов Григорий</div>
+            <div class="current-user-position">инженер-погромист</div>
+        </div>
+
+        <div id="items-container">
+
+            <div class="menu-item">
+                <a href="#/users" class="active">
+                    <span class="fa fa-user"></span>
+                    <span class="menu-item-title">Пользователи</span>
+                </a>
+                <div class="menu-item-container">
+                    <a href>Группы пользователей</a>
+                    <a href="#/ad-users">Пользователи ActiveDirectory</a>
+                </div>
+            </div>
+
+
+            <div class="menu-item">
+                <a href>
+                    <span class="fa fa-address-book"></span>
+                    <span class="menu-item-title">Телефонный справочник</span>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <a href>
+                    <span class="fa fa-sitemap"></span>
+                    <span class="menu-item-title">Структура организации</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div id="app-content">
+
+        <div id="app-content-header">
+            <a href class="app-content-title active">Пользователи</a>
+            <span class="app-content-title-divider"></span>
+            <a href class="app-content-title">Пользователи Active Directory</a>
+
+            <div id="app-content-controls">
+                <a href="#/new-user">
+                    <span class="fa fa-plus" title="Добавить пользователя"></span>
+                </a>
+            </div>
+        </div>
+
+        <div id="app-content-content">
+            <div class="padding-10" ng-view></div>
+        </div>
+
+    </div>
+
+
+
+    <script src="/node_modules/angular-route/angular-route.min.js"></script>
+    <script src="/node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="/node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="/node_modules/angular-material/angular-material.min.js"></script>
+    <script src="/modules/application.module.js"></script>
+</body>
+</html>
+<!-- END: main -->
