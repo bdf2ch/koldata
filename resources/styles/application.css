@@ -119,40 +119,39 @@ body {
 }
 #app-content-header {
   overflow: hidden;
-  height: 50px;
+  height: 40px;
   box-sizing: border-box;
   background: #EEEEEE;
   border-bottom: 1px solid #E0E0E0;
 }
 #app-content-header .app-content-title {
   float: left;
-  height: 50px;
+  height: 40px;
   padding-left: 20px;
   padding-right: 20px;
   box-sizing: border-box;
-  font-size: 25px;
-  line-height: 50px;
+  font-size: 20px;
+  line-height: 40px;
   color: #757575;
   text-decoration: none;
   border-bottom: 4px solid transparent;
 }
 #app-content-header .app-content-title-divider {
   float: left;
-  width: 50px;
-  height: 50px;
-  margin-left: -50px;
-  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  margin-left: -40px;
   transform: rotate(45deg);
   border-top: 1px solid lightgrey;
   border-right: 1px solid lightgrey;
 }
 #app-content-header #app-content-controls {
   float: right;
-  height: 50px;
+  height: 40px;
   padding-right: 10px;
   box-sizing: border-box;
-  font-size: 24px;
-  line-height: 50px;
+  font-size: 20px;
+  line-height: 40px;
 }
 #app-content-header #app-content-controls a {
   padding: 10px;
@@ -160,4 +159,35 @@ body {
 }
 #app-content-header #app-content-controls a:hover {
   color: #757575 !important;
+}
+.panel {
+  position: relative;
+  overflow: auto;
+  background: white;
+  border: 1px solid #E0E0E0;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.panel .panel-content {
+  margin-right: 200px;
+}
+.panel .panel-content .header {
+  overflow: auto;
+  box-sizing: border-box;
+}
+.panel .panel-content .title {
+  padding-bottom: 5px;
+  box-sizing: border-box;
+  font-size: 20px;
+  color: black;
+  border-bottom: 1px solid lightgrey;
+}
+.panel .panel-sidebar {
+  position: absolute;
+  width: 200px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  box-sizing: border-box;
+  background: #ECEFF1;
 }

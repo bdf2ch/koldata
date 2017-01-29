@@ -178,7 +178,7 @@ html, body {
     padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;
-    font-size: 25px;
+    font-size: 20px;
     line-height: @app-content-header-height;
     color: #757575;
     text-decoration: none;
@@ -189,8 +189,8 @@ html, body {
     float: left;
     width: @app-content-header-height;
     height: @app-content-header-height;
-    margin-left: -50px;
-    margin-right: 10px;
+    margin-left: -40px;
+    //margin-right: 10px;
     transform: rotate(45deg);
     border-top: 1px solid lightgrey;
     border-right: 1px solid lightgrey;
@@ -201,7 +201,7 @@ html, body {
     height: @app-content-header-height;
     padding-right: 10px;
     box-sizing: border-box;
-    font-size: 24px;
+    font-size: 20px;
     line-height: @app-content-header-height;
 
     a {
@@ -212,6 +212,52 @@ html, body {
         color: #757575 !important;
       }
     }
+
+  }
+}
+
+
+.panel {
+  position: relative;
+  overflow: auto;
+  background: white;
+  border: 1px solid #E0E0E0;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+
+  .panel-content {
+    margin-right: 200px;
+
+    .header {
+      overflow: auto;
+      box-sizing: border-box;
+    }
+
+    .title {
+      padding-bottom: 5px;
+      box-sizing: border-box;
+      font-size: 20px;
+      color: black;
+      border-bottom: 1px solid lightgrey;
+    }
+  }
+
+
+  .panel-sidebar {
+    position: absolute;
+    //float: right;
+    width: 200px;
+    //height: 100%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    box-sizing: border-box;
+    background: #ECEFF1;
+  }
+
+
+
+  .panel-content-header {
 
   }
 }

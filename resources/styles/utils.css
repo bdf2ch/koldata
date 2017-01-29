@@ -289,7 +289,7 @@ input[type='number'].label.border-top {
 input[type='text'].dark,
 input[type='password'].dark,
 input[type='number'].dark {
-  background: #F5F5F5;
+  background: #EEEEEE;
   border: none;
 }
 input[type='text'].obtique,
