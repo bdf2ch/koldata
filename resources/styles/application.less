@@ -37,9 +37,11 @@ html, body {
 
 
 #app-menu {
-  float: left;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
   width: @app-menu-width;
-  height: 100%;
   background: @app-menu-background-color;
 
 
@@ -159,12 +161,20 @@ html, body {
 
 
 #app-content {
-  margin-left: @app-menu-width;
+  position: absolute;
+  left: @app-menu-width;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
 }
 
 
 
 #app-content-header  {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
   overflow: hidden;
   height: @app-content-header-height;
   //padding-left: 20px;
@@ -183,6 +193,10 @@ html, body {
     color: #757575;
     text-decoration: none;
     border-bottom: 4px solid transparent;
+
+    &:hover {
+      color: black;
+    }
   }
 
   .app-content-title-divider {
@@ -217,20 +231,44 @@ html, body {
 }
 
 
+#app-content-content {
+  position: absolute;
+  left: 0px;
+  top: @app-content-header-height;
+  right: 0px;
+  bottom: 0px;
+  overflow: auto;
+}
+
 .panel {
   position: relative;
   overflow: auto;
   background: white;
-  border: 1px solid #E0E0E0;
+  //border: 1px solid #E0E0E0;
+
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 
+  &.no-sidebar {
+    .panel-content {
+      margin-right: 0px;
+      border-right: 1px solid #E0E0E0;
+    }
+  }
+
   .panel-content {
-    margin-right: 200px;
+    margin-right: 350px;
+    border-top: 1px solid #E0E0E0;
+    border-left: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
 
     .header {
       overflow: auto;
       box-sizing: border-box;
+    }
+
+    .content {
+      overflow: auto;
     }
 
     .title {
@@ -243,16 +281,15 @@ html, body {
   }
 
 
+
   .panel-sidebar {
     position: absolute;
-    //float: right;
-    width: 200px;
-    //height: 100%;
+    width: 350px;
     top: 0px;
     right: 0px;
     bottom: 0px;
     box-sizing: border-box;
-    background: #ECEFF1;
+    background: #CFD8DC;
   }
 
 
