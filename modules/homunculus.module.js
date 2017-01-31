@@ -384,7 +384,7 @@ angular
             };
 
 
-            var classes = $classesInjector.getAll();
+            var classes = $classes.getAll();
             var addClass = function (className, destination) {
                 if (className !== undefined && destination !== undefined) {
                     if (classes.hasOwnProperty(className)) {

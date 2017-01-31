@@ -1,5 +1,5 @@
 angular
-    .module("application", ["ngRoute"])
+    .module("application", ["ngRoute", "koldata"])
     .config(["$routeProvider", function ($routeProvider) {
         $routeProvider
             .when("/", {
@@ -15,8 +15,8 @@ angular
                 controller: "ActiveDirectoryUsersController"
             });
     }])
-    .run([function () {
-
+    .run(["$users", function ($users) {
+        $users.init(window.initial_data.users);
     }]);
 
 
@@ -24,15 +24,15 @@ angular
 
 angular
     .module("application")
-    .controller("UsersController", ["$scope", function ($scope) {
-
+    .controller("UsersController", ["$scope", "$users", function ($scope, $users) {
+        $scope.users = $users;
     }]);
 
 
 angular
     .module("application")
-    .controller("NewUserController", ["$scope", function ($scope) {
-
+    .controller("NewUserController", ["$scope", "$users", function ($scope, $users) {
+        $scope.users = $users;
     }]);
 
 

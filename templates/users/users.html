@@ -17,36 +17,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td class="width-30">Брахмапутров Игорь Дмитриевич</td>
-                    <td class="width-20">idbrahmaputrov@kolenergo.ru</td>
-                    <td class="width-20">Менеджер по сбору бутылок</td>
+                <tr ng-repeat="user in users.getAll() track by $index">
+                    <td class="width-30">{{ user.surname.value + " " + user.name.value + " " + user.fname.value }}</td>
+                    <td class="width-20">{{ user.email.value }}</td>
+                    <td class="width-20">{{ user.position.value }}</td>
                     <td class="width-30">Сектор по сбору посуды</td>
                 </tr>
-                <tr>
-                    <td class="width-30">Брахмапутров Игорь Дмитриевич</td>
-                    <td class="width-20">idbrahmaputrov@kolenergo.ru</td>
-                    <td class="width-20">Менеджер по сбору бутылок</td>
-                    <td class="width-30">Сектор по сбору посуды</td>
-                </tr>
-                <tr>
-                    <td class="width-30">Брахмапутров Игорь Дмитриевич</td>
-                    <td class="width-20">idbrahmaputrov@kolenergo.ru</td>
-                    <td class="width-20">Менеджер по сбору бутылок</td>
-                    <td class="width-30">Сектор по сбору посуды</td>
-                </tr>
-                <tr>
-                    <td class="width-30">Брахмапутров Игорь Дмитриевич</td>
-                    <td class="width-20">idbrahmaputrov@kolenergo.ru</td>
-                    <td class="width-20">Менеджер по сбору бутылок</td>
-                    <td class="width-30">Сектор по сбору посуды</td>
-                </tr>
-                <tr>
-                    <td class="width-30">Брахмапутров Игорь Дмитриевич</td>
-                    <td class="width-20">idbrahmaputrov@kolenergo.ru</td>
-                    <td class="width-20">Менеджер по сбору бутылок</td>
-                    <td class="width-30">Сектор по сбору посуды</td>
-                </tr>
+               <tr>
+                   <td colspan="4" class="text-center padding-30" ng-show="users.getAll().length === 0">Пользователи отсутствуют</td>
+               </tr>
                 </tbody>
             </table>
         </div>

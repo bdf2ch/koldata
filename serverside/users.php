@@ -1,5 +1,16 @@
 <?php
 
+
+    function getUsers () {
+        global $link;
+
+        $result = pg_query($link, "SELECT get_users()");
+        $users = pg_fetch_all($result);
+        echo($users[0]["get_users"]);
+        return $users[0]["get_users"];
+    }
+
+
     function addUser ($parameters) {
         global $link;
         $departmentId = $parameters -> departmentId;
